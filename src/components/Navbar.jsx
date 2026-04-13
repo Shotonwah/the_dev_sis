@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaGithub, FaTimes, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

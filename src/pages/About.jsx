@@ -1,10 +1,10 @@
 import tech from "../assets/layo2.jpg";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import FadeIn from "../components/FadeIn";
-import Nhero from "../components/Nhero";
-import SkillsPreview from "../components/SkillsPreview";
-import ContactMe from "../components/ContactMe";
+import FadeIn from "../../src/components/FadeIn";
+import Nhero from "../../src/components/Nhero";
+import SkillsPreview from "../../src/components/SkillsPreview";
+import ContactMe from "../../src/components/ContactMe";
 
 function About() {
   return (

@@ -1,5 +1,5 @@
 import { FaPaintBrush, FaCode, FaMobileAlt } from "react-icons/fa";
-import FadeIn from "../components/FadeIn";
+import FadeIn from "./FadeIn";
 
 const services = [
   {

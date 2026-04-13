@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
 
 function ProjectsPreview() {
