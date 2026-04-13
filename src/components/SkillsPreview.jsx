@@ -11,7 +11,7 @@ function AboutPreview() {
     "Vite/Webpack",
     "Design Tools",
     "Problem Solving",
-    "Continous Learning"
+    "Continous Learning",
   ];
 
   return (
