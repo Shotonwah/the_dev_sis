@@ -1,0 +1,22 @@
+import { motion } from "framer-motion";
+
+function FadeIn({ children, delay = 0 }) {
+  return (
+    <>
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.7,
+          delay: delay,
+          ease: "easeOut",
+        }}
+        viewport={{ once: true, margin: "-50px" }}
+      >
+        {children}
+      </motion.div>
+    </>
+  );
+}
+
+export default FadeIn;
