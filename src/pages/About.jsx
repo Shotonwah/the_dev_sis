@@ -1,4 +1,4 @@
-import tech from "../assets/layo2.jpg";
+import tech from "../assets/about.jpg";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import FadeIn from "../components/FadeIn";
