@@ -2,10 +2,11 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaGithub, FaTimes, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const handleClose = () => setIsOpen(false)
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -71,6 +72,7 @@ function Navbar() {
           <NavLink
             key={link.name}
             to={link.path}
+            onClick={handleClose}
             className={({ isActive }) =>
               `relative group transition text-2xl ${
                 isActive ? "text-[#0f1420] font-semibold" : "text-gray-500"

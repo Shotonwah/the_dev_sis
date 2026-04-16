@@ -35,7 +35,7 @@ function Hero() {
                 visible: { opacity: 1, x: 0 },
               }}
               transition={{ duration: 0.3 }}
-              className="inline-block text-gray-500 text-2xl md:text-5xl font-bold mt-5 drop-shadow-xl ml-1"
+              className="inline-block text-gray-500 text-lg md:text-5xl font-bold mt-5 drop-shadow-xl ml-1"
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>
@@ -61,7 +61,7 @@ function Hero() {
                 visible: { opacity: 1, x: 0 },
               }}
               transition={{ duration: 0.3 }}
-              className="inline-block text-white text-xl md:text-4xl font-bold mt-5 drop-shadow-xl ml-1"
+              className="inline-block text-white text-sm md:text-4xl font-bold mt-5 drop-shadow-xl ml-1"
             >
               {char === " " ? "\u00A0" : char}
             </motion.span>

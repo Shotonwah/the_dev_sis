@@ -1,11 +1,11 @@
-import Hero from '../../src/components/Hero';
-import ProjectPreview from "../../src/components/ProjectPreview";
-import SkillsPreview from '../../src/components/SkillsPreview';
-import ContactMe from "../../src/components/ContactMe";
-import DesignProcess from "../../src/components/DesignProcess";
-import Services from "../../src/components/Services";
-import FadeIn from "../../src/components/FadeIn";
-import Nhero from "../../src/components/Nhero";
+import Hero from '../components/Hero';
+import ProjectPreview from "../components/ProjectPreview";
+import SkillsPreview from '../components/SkillsPreview';
+import ContactMe from "../components/ContactMe";
+import DesignProcess from "../components/DesignProcess";
+import Services from "../components/Services";
+import FadeIn from "../components/FadeIn";
+import Nhero from "../components/Nhero";
 
 function Home() {
     return(

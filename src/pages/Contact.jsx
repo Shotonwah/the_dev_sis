@@ -1,4 +1,4 @@
-import layo from "../assets/dashboard.jpg";
+import layo from "../assets/img2.jpg";
 import img from "../assets/img1.jpg";
 import { useState } from "react";
 

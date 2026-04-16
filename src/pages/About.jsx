@@ -1,10 +1,10 @@
 import tech from "../assets/layo2.jpg";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import FadeIn from "../../src/components/FadeIn";
-import Nhero from "../../src/components/Nhero";
-import SkillsPreview from "../../src/components/SkillsPreview";
-import ContactMe from "../../src/components/ContactMe";
+import FadeIn from "../components/FadeIn";
+import Nhero from "../components/Nhero";
+import SkillsPreview from "../components/SkillsPreview";
+import ContactMe from "../components/ContactMe";
 
 function About() {
   return (
@@ -21,7 +21,7 @@ function About() {
           className="w-full h-full object-cover object-[60%_25%]"
         />
         <div className="absolute bg-black/60 flex items-center justify-center bottom-0">
-          <h1 className="text-5xl md:text-8xl font-bold text-white">
+          <h1 className="text-4xl md:text-8xl font-bold text-white">
             About Haleemah
           </h1>
         </div>

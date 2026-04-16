@@ -45,7 +45,7 @@ function Footer() {
           </button>
 
           <div>
-            <p>&copy; Copyright Haleemah &middot; 2026</p>
+            <p>&copy; Copyright Haleemah 2026</p>
           </div>
 
           {open && (

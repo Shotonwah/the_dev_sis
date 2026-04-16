@@ -1,7 +1,7 @@
-import p1 from "../assets/youtubeclone.jpg";
+import p1 from "../assets/youtube.jpg";
 import p2 from "../assets/vaccine.jpg";
 import p3 from "../assets/p1.jpg";
-import p4 from "../assets/dashboard.jpg";
+import p4 from "../assets/dashboard1.jpg";
 
 export const projects = [
    {
