@@ -19,7 +19,7 @@ function Contact() {
   const [message, setMessage] = useState("");
   return (
     <>
-      <section className="min-h-screen py-15">
+      <section className="min-h-screen py-15 pt-15">
         <div className="relative h-80 md:h-100 px-6">
           <img
             src={layo}
@@ -32,7 +32,7 @@ function Contact() {
             </h1>
           </div>
         </div>
-        <div className="flex items-stretch gap-10 flex-col md:flex-row px-8">
+        <div className="flex items-stretch gap-10 flex-col md:flex-row px-8 w-full max-w-600 mx-auto">
           <div className="w-full md:w-1/2 md:mt-20 mt-0 rounded-xl">
             <img
               src={img}
@@ -89,7 +89,7 @@ function Contact() {
               <button className="relative overflow-hidden border border-black w-full mt-5 px-6 py-3 rounded-full group">
                 <span className="absolute inset-0 bg-black translate-x-0 group-hover:translate-x-full transition-transform duration-500 ease-in-out"></span>
                 <span className="relative z-10 text-white group-hover:text-black md:text-xl text-sm transition">
-                  Submit
+                  Send Message
                 </span>
               </button>
             </form>

@@ -17,9 +17,12 @@ function ContactMe() {
             <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
             <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
             <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
+            <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
+            <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
+            <span>LET'S TALK • LET'S TALK • LET'S TALK •</span>
           </div>
           <div>
-            <h1 className="text-center md:text-4xl text-3xl font-bold py-20 px-10 text-white ml-1">
+            <h1 className="text-center md:text-5xl text-3xl font-bold py-20 px-10 text-white">
               Got a Project in mind?
             </h1>
           </div>

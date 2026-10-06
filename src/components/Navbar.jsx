@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaGithub, FaTimes, FaTwitter } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
@@ -7,6 +7,14 @@ import Footer from "../components/Footer";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const handleClose = () => setIsOpen(false)
+  const [scrolled, setScrolled] = useState(false)
+   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); 
+    };
+    window.addEventListener("scroll", handleScroll);
+    return() => removeEventListener("scroll", handleScroll);
+   }, [])
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -17,27 +25,32 @@ function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/70 border-b border-gray-200">
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled ? "bg-white/50 backdrop-blur-md border-b border-gray-200 shadow-sm" : "bg-[#0B0F19] backdrop-blur-md shadow"
+      }`}>
         <div className="flex items-center justify-between px-6 py-4">
-          <h1 className="text-xl text-[#25282e] font-bold">S.Haleemah</h1>
+          <h1 className={`text-xl font-bold ${ 
+            scrolled ? "text-[#25282e]" : "text-white"
+          }`}>S.Haleemah</h1>
           <div className="hidden md:flex gap-10 absolute left-1/2 transform -translate-x-1/2">
             {navLinks.map((link) => (
               <NavLink
                 key={link.name}
                 to={link.path}
-                className={({ isActive }) =>
+                className={({ isActive, scrolled }) =>
                   `relative group transition text-xl ${
-                    isActive ? "text-[#0f1420] font-semibold" : "text-gray-500"
+                    isActive, scrolled ? "text-gray-800 font-semibold" : "text-gray-300"
                   }`
                 }
               >
                 {link.name}
-                <span className="absolute left-0 -bottom-1 h-0.5 bg-black w-0 group-hover:w-full transition-all"></span>
+                <span className="absolute left-0 -bottom-1 h-0.5 bg-white w-0 group-hover:w-full transition-all"></span>
               </NavLink>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-6 text-xl">
+          <div className={`hidden md:flex items-center gap-6 text-xl ${
+            scrolled ? "text-black" : "text-white"}`}>
             <NavLink to="https://github.com/dashboard">
               <FaGithub className="cursor-pointer hover:scale-110 transition" />
             </NavLink>
@@ -50,7 +63,9 @@ function Navbar() {
           </div>
 
           <div
-            className="md:hidden text-2xl cursor-pointer"
+            className={`md:hidden text-2xl cursor-pointer ${
+              scrolled ? "text-[#25282e]" : "text-white"
+            }`}
             onClick={() => setIsOpen(true)}
           >
             <FaBars />

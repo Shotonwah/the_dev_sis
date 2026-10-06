@@ -9,11 +9,12 @@ import ContactMe from "../components/ContactMe";
 function About() {
   return (
     <>
-      <motion.div
+     <section className="pt-6">
+       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className=" relative h-100 md:h-150 pt-10 px-6"
+        className=" relative h-100 md:h-150 pt-10 px-6 w-full max-w-600 mx-auto"
       >
         <img
           src={tech}
@@ -26,16 +27,16 @@ function About() {
           </h1>
         </div>
       </motion.div>
-      <FadeIn>
+      <FadeIn className="w-full max-w-600">
         <Nhero />
       </FadeIn>
       <motion.div
         initial={{ opacity: 0, scale: 0.8, y: 40 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col md:flex-row items-center gap-8 mx-auto px-6 py-4 mt-15"
+        className="flex flex-col md:flex-row items-center gap-8 mx-auto px-6 py-4 mt-15 w-full max-w-600"
       >
-        <h2 className="text-2xl md:text-4xl max-w-2xl md:-mt-20 mt-0 font-semibold">
+        <h2 className="text-2xl md:text-4xl max-w-4xl md:-mt-20 mt-0 font-semibold">
           Hi, I'm Haleemah Shotonwa, a Frontend developer and UI Designer based
           in Lagos,Nigeria.
         </h2>
@@ -59,8 +60,11 @@ function About() {
         </div>
       </motion.div>{" "}
       <hr className="w-full px-8 text-gray-400" />
-      <SkillsPreview />
+      <div className="">
+          <SkillsPreview />
       <ContactMe />
+      </div>
+     </section>
     </>
   );
 }

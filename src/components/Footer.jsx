@@ -29,9 +29,10 @@ function Footer() {
           initial={{ opacity: 0, scale: 0.8, y: 40 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex items-center static bottom-0 gap-6 justify-center"
+          className="flex items-center flex-col sm:flex-row bottom-0 gap-6 justify-center"
         >
-          <NavLink to="https://github.com/dashboard">
+          <div className="flex items-center gap-6">
+            <NavLink to="https://github.com/dashboard">
             <FaGithub className="cursor-pointer hover:scale-110 transition" />
           </NavLink>
           <NavLink to="https://linkedin.com/in/shotonwa-haleemah-2918a731a">
@@ -43,9 +44,10 @@ function Footer() {
           <button onClick={() => setOpen(true)}>
             <FaShareAlt />
           </button>
+          </div>
 
           <div>
-            <p>&copy; Copyright Haleemah 2026</p>
+            <p>&copy; Copyright Haleemah Shotonwa 2026</p>
           </div>
 
           {open && (

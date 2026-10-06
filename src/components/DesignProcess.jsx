@@ -28,20 +28,18 @@ const steps = [
 function DesignProcess() {
   const ref = useRef(null);
 
-  // scroll progress
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start center", "end end"],
   });
 
-  // line fill animation
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <>
       <div className="py-5 bg-white text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
-          Design Process
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-600 mb-4">
+          Design <span className="text-gray-300">Process</span>
         </h2>
       </div>
       <section ref={ref} className="relative py-24 px-6 bg-[#0b0f19]">
@@ -55,9 +53,8 @@ function DesignProcess() {
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`relative mb-32 flex ${
-                index % 2 === 0 ? "justify-start" : "justify-end"
-              }`}
+              className={`relative mb-32 flex ${index % 2 === 0 ? "justify-start" : "justify-end"
+                }`}
             >
               <motion.div
                 initial={{ opacity: 0, y: 80 }}
@@ -74,11 +71,10 @@ function DesignProcess() {
                 </p>
               </motion.div>
               <div
-                className={`absolute top-1/2 -translate-y-1/2 text-6xl md:text-7xl font-bold text-gray-700 ${
-                  index % 2 === 0
+                className={`absolute top-1/2 -translate-y-1/2 text-6xl md:text-7xl font-bold text-gray-700 ${index % 2 === 0
                     ? "left-[60%] md:left-[60%]"
                     : "right-[60%] md:right-[60%]"
-                }`}
+                  }`}
               >
                 {String(index + 1).padStart(2, "0")}
               </div>
